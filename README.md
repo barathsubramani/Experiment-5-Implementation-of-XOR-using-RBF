@@ -120,8 +120,8 @@ print(f"Input:{np.array([1,1])}, Predicted: {predict_matrix(np.array([1, 1]), w)
 
 
 ## OUTPUT :
-    /**PLOTS of Output in hidden space**/
-    /Classification results
+    
+## Classification results
 ![model](3.png)
 
 ## RESULT:
