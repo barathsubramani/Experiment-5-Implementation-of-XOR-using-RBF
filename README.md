@@ -61,7 +61,6 @@ def end_to_end(X1, X2, ys, mu1, mu2):
     from_1 = [gaussian_rbf(i, mu1) for i in zip(X1, X2)]
     from_2 = [gaussian_rbf(i, mu2) for i in zip(X1, X2)]
     # plot
-    
     plt.figure(figsize=(13, 5))
     plt.subplot(1, 2, 1)
     plt.scatter((x1[0], x1[3]), (x2[0], x2[3]), label="Class_0")
@@ -70,8 +69,6 @@ def end_to_end(X1, X2, ys, mu1, mu2):
     plt.ylabel("$X2$", fontsize=15)
     plt.title("Xor: Linearly Inseparable", fontsize=15)
     plt.legend()
-
-
     plt.subplot(1, 2, 2)
     plt.scatter(from_1[0], from_2[0], label="Class_0")
     plt.scatter(from_1[1], from_2[1], label="Class_1")
@@ -87,15 +84,12 @@ def end_to_end(X1, X2, ys, mu1, mu2):
     # solving problem using matrices form
     # AW = Y
     A = []
-
-
     for i, j in zip(from_1, from_2):
         temp = []
         temp.append(i)
         temp.append(j)
         temp.append(1)
         A.append(temp)
-    
     A = np.array(A)
     W = np.linalg.inv(A.T.dot(A)).dot(A.T).dot(ys)
     print(np.round(A.dot(W)))
@@ -111,19 +105,11 @@ def predict_matrix(point, weights):
 x1 = np.array([0, 0, 1, 1])
 x2 = np.array([0, 1, 0, 1])
 ys = np.array([0, 1, 1, 0])
-
-
 # centers
 mu1 = np.array([0, 1])
 mu2 = np.array([1, 0])
-
-
 w = end_to_end(x1, x2, ys, mu1, mu2)
-
-
 # testing
-
-
 print(f"Input:{np.array([0, 0])}, Predicted: {predict_matrix(np.array([0, 0]), w)}")
 print(f"Input:{np.array([0, 1])}, Predicted: {predict_matrix(np.array([0, 1]), w)}")
 print(f"Input:{np.array([1, 0])}, Predicted: {predict_matrix(np.array([1, 0]), w)}")
