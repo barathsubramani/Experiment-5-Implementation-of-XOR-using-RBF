@@ -53,10 +53,8 @@ Step 7 :
 Test for the XOR patterns.
 
 ## PROGRAM:
-```
 Name: Barath S
 Register no: 212222230018
-```
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
