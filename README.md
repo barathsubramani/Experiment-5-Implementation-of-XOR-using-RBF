@@ -23,7 +23,6 @@ A Radial Basis Function Network (RBFN) is a particular type of neural network. T
 
 A Neural network with input layer, one hidden layer with Radial Basis function and a single node output layer (as shown in figure below) will be able to classify the binary data according to XOR output.
 
-<img width="261" alt="image" src="https://user-images.githubusercontent.com/112920679/201300944-5510d7f4-ea0f-45ec-875d-87f463927e9d.png">
 
 The RBF of hidden neuron as gaussian function 
 
